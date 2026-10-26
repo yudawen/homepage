@@ -1,10 +1,226 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="余大文 Dawen Yu｜遥感与地理空间人工智能"><title>余大文 Dawen Yu | Remote Sensing & Geospatial AI</title><link rel="stylesheet" href="yudawen_files/site.css"></head><body><div class="shell">
-<header class="site-head"><div class="site-mark">DY</div><div><p class="brand-name">余大文 <span>Dawen Yu</span></p><p class="brand-subtitle">Remote Sensing · Geospatial AI · Computer Vision</p></div></header>
-<nav class="main-nav" aria-label="主导航"><a class="active" href="index.html">首页</a><a href="publications.html">论文</a><a href="research.html">科研与荣誉</a><a href="service.html">学术服务</a></nav>
-<main><section class="hero"><img class="hero-photo" src="yudawen_files/yudawen2023.jpg" alt="余大文 Dawen Yu"><div><p class="eyebrow">ASSISTANT RESEARCH FELLOW · MASTER'S SUPERVISOR</p><h1>余大文 <span>Dawen Yu</span></h1><p class="title">助理研究员 · 硕士生导师 · 摄影测量与遥感工学博士</p><p class="affiliation">福州大学 · 数字中国研究院（福建）<br>The Academy of Digital China, Fuzhou University</p><p class="contact"><a href="mailto:yudawen@fzu.edu.cn">yudawen@fzu.edu.cn</a><span>·</span><a href="mailto:yudawen@whu.edu.cn">yudawen@whu.edu.cn</a></p></div></section>
-<p class="notice"><strong>欢迎交流：</strong>研究聚焦高分辨率遥感影像智能解译、建筑物提取与三维建模，以及地理空间人工智能。</p>
-<section class="section"><h2 class="section-title">个人简介 <small>About</small></h2><p>1995年生，福建顺昌人，福建省高层次人才，2023年12月于武汉大学摄影测量与遥感专业获得工学博士学位，主要研究方向为高分辨率遥感影像智能解译的理论与方法。在IEEE TGRS、ISPRS P&RS、Landslides等图像处理/摄影测量与遥感/地学领域的顶级期刊上发表论文多篇，3篇入选为ESI全球前1%高被引论文。攻博期间连续三年获得国家奖学金并同时连续三年获得专项奖学金。曾获第十六、十八届中国研究生数学建模竞赛一等奖，第一届天智杯人工智能挑战赛冠军，2021年测绘科学技术奖特等奖，2021年贵州省科学技术进步奖一等奖，2021年地理信息科技进步奖二等奖，2022年测绘科学技术奖二等奖，2023年武汉大学科研之星等。2024年起，主持国家自然科学基金项目和福建省自然科学基金项目等多项国家和省部级科研课题。</p></section>
-<section class="section"><h2 class="section-title">研究方向 <small>Research Interests</small></h2><div class="two-col"><div class="card"><h3>核心课题</h3><div><span class="tag">深度学习图像处理</span><span class="tag">遥感目标检测</span><span class="tag">地表覆盖分类</span><span class="tag">建筑物提取</span><span class="tag">三维建模</span><span class="tag">地灾遥感识别</span></div></div><div class="card"><h3>研究关键词</h3><p>Remote Sensing · Photogrammetry · Computer Vision · Deep Learning · Geospatial AI</p></div></div></section>
-<section class="section"><h2 class="section-title">学术概览 <small>Academic Snapshot</small></h2><div class="stats"><div class="stat"><strong>13</strong><span>第一/通讯作者论文</span></div><div class="stat"><strong>3</strong><span>ESI 高被引论文</span></div><div class="stat"><strong>2</strong><span>主持省部级及以上基金</span></div></div></section>
-<section class="section"><h2 class="section-title">经历 <small>Experience</small></h2><div class="two-col"><div class="card"><h3>工作经历</h3><ul class="timeline"><li><span class="timeline-content"><time>2024.07-至今</time>助理研究员、硕士生导师，福州大学数字中国研究院（福建）</span></li></ul></div><div class="card"><h3>学习经历</h3><ul class="timeline"><li><span class="timeline-content"><time>2020.09-2023.12</time>博士，武汉大学 遥感信息工程学院 摄影测量与遥感</span></li><li><span class="timeline-content"><time>2018.09-2020.06</time>硕士，武汉大学 遥感信息工程学院 摄影测量与遥感</span></li><li><span class="timeline-content"><time>2014.09-2018.06</time>本科，武汉大学 遥感信息工程学院 遥感科学与技术</span></li></ul></div></div></section>
-</main><footer class="footer">© 2026 Dawen Yu · Fuzhou University <a href="mailto:yudawen@fzu.edu.cn">Contact</a></footer></div></body></html>
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="余大文 Dawen Yu｜遥感与地理空间人工智能">
+  <title>余大文 Dawen Yu | Remote Sensing & Geospatial AI</title>
+  <link rel="stylesheet" href="yudawen_files/site.css">
+
+  <style>
+    /* 仅控制“经历”部分的两个模块 */
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /*!* 仅在手机等窄屏设备上改为上下排列 *!*/
+    /*@media (max-width: 640px) {*/
+    /*  .experience-grid {*/
+    /*    grid-template-columns: 1fr;*/
+    /*  }*/
+    /*}*/
+
+
+
+/* 只调整工作经历和学习经历 */
+.experience-grid .card {
+  display: block !important;
+  padding: 16px !important;
+}
+
+.experience-grid .card h3 {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 10px 0 !important;
+}
+
+/* 取消时间线的横向布局和左侧缩进 */
+.experience-grid .card ul.timeline {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+/*.experience-grid .card ul.timeline li {*/
+/*  display: block !important;*/
+/*  width: 100% !important;*/
+/*  margin: 0 0 10px 0 !important;*/
+/*  padding: 0 !important;*/
+/*}*/
+
+/* 整条经历另起一行，左侧与标题对齐 */
+.experience-grid .card .timeline-content {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* 时间和具体内容仍然在同一行 */
+.experience-grid .card .timeline-content time {
+  display: inline !important;
+  margin: 0 8px 0 0 !important;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="shell">
+
+  <header class="site-head">
+    <div class="site-mark">DY</div>
+    <div>
+      <p class="brand-name">余大文 <span>Dawen Yu</span></p>
+      <p class="brand-subtitle">Remote Sensing · Geospatial AI · Computer Vision</p>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="主导航">
+    <a class="active" href="index.html">首页</a>
+    <a href="publications.html">论文</a>
+    <a href="research.html">科研与荣誉</a>
+    <a href="service.html">学术服务</a>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+      <img class="hero-photo" src="yudawen_files/yudawen2023.jpg" alt="余大文 Dawen Yu">
+
+      <div>
+        <p class="eyebrow">ASSISTANT RESEARCH FELLOW · MASTER'S SUPERVISOR</p>
+        <h1>余大文 <span>Dawen Yu</span></h1>
+        <p class="title">助理研究员 · 硕士生导师 · 摄影测量与遥感工学博士</p>
+        <p class="affiliation">
+          福州大学 · 数字中国研究院（福建）<br>
+          The Academy of Digital China, Fuzhou University
+        </p>
+        <p class="contact">
+          <a href="mailto:yudawen@fzu.edu.cn">yudawen@fzu.edu.cn</a>
+          <span>·</span>
+          <a href="mailto:yudawen@whu.edu.cn">yudawen@whu.edu.cn</a>
+        </p>
+      </div>
+    </section>
+
+    <p class="notice">
+      <strong>欢迎交流：</strong>
+      研究聚焦高分辨率遥感影像智能解译、建筑物提取与三维建模，以及地理空间人工智能。
+    </p>
+
+    <section class="section">
+      <h2 class="section-title">个人简介 <small>About</small></h2>
+      <p>
+        1995年生，福建顺昌人，福建省高层次人才，2023年12月于武汉大学摄影测量与遥感专业获得工学博士学位，主要研究方向为高分辨率遥感影像智能解译的理论与方法。在IEEE TGRS、ISPRS P&RS、Landslides等图像处理/摄影测量与遥感/地学领域的顶级期刊上发表论文多篇，3篇入选为ESI全球前1%高被引论文。攻博期间连续三年获得国家奖学金并同时连续三年获得专项奖学金。曾获第十六、十八届中国研究生数学建模竞赛一等奖，第一届天智杯人工智能挑战赛冠军，2021年测绘科学技术奖特等奖，2021年贵州省科学技术进步奖一等奖，2021年地理信息科技进步奖二等奖，2022年测绘科学技术奖二等奖，2023年武汉大学科研之星等。2024年起，主持国家自然科学基金项目和福建省自然科学基金项目等多项国家和省部级科研课题。
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">研究方向 <small>Research Interests</small></h2>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>核心课题</h3>
+          <div>
+            <span class="tag">深度学习图像处理</span>
+            <span class="tag">遥感目标检测</span>
+            <span class="tag">地表覆盖分类</span>
+            <span class="tag">建筑物提取</span>
+            <span class="tag">三维建模</span>
+            <span class="tag">地灾遥感识别</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>研究关键词</h3>
+          <p>
+            Remote Sensing · Photogrammetry · Computer Vision ·
+            Deep Learning · Geospatial AI
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!--    <section class="section">-->
+<!--      <h2 class="section-title">学术概览 <small>Academic Snapshot</small></h2>-->
+
+<!--      <div class="stats">-->
+<!--        <div class="stat">-->
+<!--          <strong>13</strong>-->
+<!--          <span>第一/通讯作者论文</span>-->
+<!--        </div>-->
+<!--        <div class="stat">-->
+<!--          <strong>3</strong>-->
+<!--          <span>ESI 高被引论文</span>-->
+<!--        </div>-->
+<!--        <div class="stat">-->
+<!--          <strong>2</strong>-->
+<!--          <span>主持省部级及以上基金</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <!-- 经历：仅此处采用独立的横向双栏布局 -->
+    <section class="section">
+      <h2 class="section-title">经历 <small>Experience</small></h2>
+
+      <div class="experience-grid">
+
+        <div class="card">
+          <h3>工作经历</h3>
+
+          <ul class="timeline">
+            <li>
+              <span class="timeline-content">
+                <time>2024.07-至今</time>
+                助理研究员、硕士生导师，福州大学 数字中国研究院
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>学习经历</h3>
+          <ul class="timeline">
+            <li>
+              <span class="timeline-content">
+                <time>2020.09-2023.12</time>
+                博士，武汉大学 遥感信息工程学院 摄影测量与遥感
+              </span>
+            </li>
+            <li>
+              <span class="timeline-content">
+                <time>2018.09-2020.06</time>
+                硕士，武汉大学 遥感信息工程学院 摄影测量与遥感
+              </span>
+            </li>
+            <li>
+              <span class="timeline-content">
+                <time>2014.09-2018.06</time>
+                本科，武汉大学 遥感信息工程学院 遥感科学与技术
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 Dawen Yu · Fuzhou University
+    <a href="mailto:yudawen@fzu.edu.cn">Contact</a>
+  </footer>
+
+</div>
+</body>
+</html>
