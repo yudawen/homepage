@@ -1,13 +1,18 @@
 <!doctype html><html lang="zh-CN"><head><style>
-/* 强制放大所有 plain-list 有序列表的序号 */
+/* 放大承担项目、奖励与荣誉、专利与软件著作的序号 */
 body .shell main ol.plain-list {
   list-style-type: decimal !important;
   list-style-position: outside !important;
 }
 
 body .shell main ol.plain-list > li::marker {
-  font-family: Arial, sans-serif !important;
-  font-size: 22px !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  color: #c00000 !important;
+}
+
+body .shell main ol.plain-list > li::before {
+  font-size: 15px !important;
   font-weight: 900 !important;
   color: #c00000 !important;
 }
