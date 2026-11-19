@@ -270,7 +270,7 @@
   const UV_OFFSET = 1000;
   const PV_OFFSET = 3000;
 
-  function updateBusuanziDisplay() {
+  function updateDisplay() {
     const uvElement = document.getElementById('busuanzi_value_site_uv');
     const pvElement = document.getElementById('busuanzi_value_site_pv');
 
@@ -279,22 +279,26 @@
 
     if (!uvElement || !pvElement || !displayUV || !displayPV) return;
 
-    const uv = parseInt(uvElement.textContent.replace(/,/g, ''), 10);
-    const pv = parseInt(pvElement.textContent.replace(/,/g, ''), 10);
+    const uvText = uvElement.textContent.trim().replace(/,/g, '');
+    const pvText = pvElement.textContent.trim().replace(/,/g, '');
 
-    if (!Number.isNaN(uv)) {
+    const uv = Number(uvText);
+    const pv = Number(pvText);
+
+    if (uvText !== '' && Number.isFinite(uv)) {
       displayUV.textContent = (uv + UV_OFFSET).toLocaleString();
     }
 
-    if (!Number.isNaN(pv)) {
+    if (pvText !== '' && Number.isFinite(pv)) {
       displayPV.textContent = (pv + PV_OFFSET).toLocaleString();
     }
   }
 
-  // 等待不蒜子异步返回数据
-  const timer = setInterval(updateBusuanziDisplay, 500);
+  // 立即尝试一次，并持续检查异步返回的数据
+  updateDisplay();
+  const timer = setInterval(updateDisplay, 500);
 
-  // 最多等待 30 秒
+  // 30 秒后停止检查
   setTimeout(() => clearInterval(timer), 30000);
 })();
 </script>
