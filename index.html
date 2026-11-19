@@ -248,16 +248,16 @@
   </span>
 
   <!-- 中间 -->
-  <!-- <span style="text-align: center;  white-space: nowrap ">
+  <span style="text-align: center;  white-space: nowrap ">
     👤 Visitors: <span id="busuanzi_value_site_uv">加载中...</span>
     &nbsp; | &nbsp;
     👁 Page Views: <span id="busuanzi_value_site_pv">加载中...</span>
-  </span> -->
-<span style="text-align: center; white-space: nowrap;">
+  </span>
+<!-- <span style="text-align: center; white-space: nowrap;">
   👤 Visitors: <span id="display_uv">加载中...</span>
   &nbsp; | &nbsp;
   👁 Page Views: <span id="display_pv">加载中...</span>
-</span>
+</span> -->
   <!-- 右侧 -->
   <a href="mailto:yudawen@fzu.edu.cn" style="text-align: right;">
     Contact
@@ -265,45 +265,37 @@
 </footer>
 
 </div>
- <script>
+<script>
 (function () {
-  // 初始统计值
-  const initialUV = 1000;
-  const initialPV = 3000;
+  const UV_OFFSET = 1000;
+  const PV_OFFSET = 3000;
 
-  const sourceUV = document.getElementById('busuanzi_value_site_uv');
-  const sourcePV = document.getElementById('busuanzi_value_site_pv');
+  function updateBusuanziDisplay() {
+    const uvElement = document.getElementById('busuanzi_value_site_uv');
+    const pvElement = document.getElementById('busuanzi_value_site_pv');
 
-  const displayUV = document.getElementById('display_uv');
-  const displayPV = document.getElementById('display_pv');
+    const displayUV = document.getElementById('display_uv');
+    const displayPV = document.getElementById('display_pv');
 
-  if (!sourceUV || !sourcePV || !displayUV || !displayPV) return;
+    if (!uvElement || !pvElement || !displayUV || !displayPV) return;
 
-  function updateCount() {
-    const uv = parseInt(sourceUV.textContent.replace(/,/g, ''), 10);
-    const pv = parseInt(sourcePV.textContent.replace(/,/g, ''), 10);
+    const uv = parseInt(uvElement.textContent.replace(/,/g, ''), 10);
+    const pv = parseInt(pvElement.textContent.replace(/,/g, ''), 10);
 
-    if (Number.isFinite(uv) && Number.isFinite(pv)) {
-      displayUV.textContent = (uv + initialUV).toLocaleString();
-      displayPV.textContent = (pv + initialPV).toLocaleString();
+    if (!Number.isNaN(uv)) {
+      displayUV.textContent = (uv + UV_OFFSET).toLocaleString();
+    }
+
+    if (!Number.isNaN(pv)) {
+      displayPV.textContent = (pv + PV_OFFSET).toLocaleString();
     }
   }
 
-  const observer = new MutationObserver(updateCount);
+  // 等待不蒜子异步返回数据
+  const timer = setInterval(updateBusuanziDisplay, 500);
 
-  observer.observe(sourceUV, {
-    childList: true,
-    characterData: true,
-    subtree: true
-  });
-
-  observer.observe(sourcePV, {
-    childList: true,
-    characterData: true,
-    subtree: true
-  });
-
-  updateCount();
+  // 最多等待 30 秒
+  setTimeout(() => clearInterval(timer), 30000);
 })();
 </script>
 </body>
