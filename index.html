@@ -248,16 +248,16 @@
   </span>
 
   <!-- 中间 -->
-  <!-- <span style="text-align: center;  white-space: nowrap ">
+  <span style="text-align: center;  white-space: nowrap ">
     👤 Visitors: <span id="busuanzi_value_site_uv">加载中...</span>
     &nbsp; | &nbsp;
     👁 Page Views: <span id="busuanzi_value_site_pv">加载中...</span>
-  </span> -->
-<span style="text-align: center; white-space: nowrap;">
+  </span>
+<!-- <span style="text-align: center; white-space: nowrap;">
   👤 Visitors: <span id="display_uv">加载中...</span>
   &nbsp; | &nbsp;
   👁 Page Views: <span id="display_pv">加载中...</span>
-</span>
+</span> -->
   <!-- 右侧 -->
   <a href="mailto:yudawen@fzu.edu.cn" style="text-align: right;">
     Contact
@@ -265,42 +265,6 @@
 </footer>
 
 </div>
-<script>
-(function () {
-  const UV_OFFSET = 1000;
-  const PV_OFFSET = 3000;
 
-  function updateDisplay() {
-    const uvElement = document.getElementById('busuanzi_value_site_uv');
-    const pvElement = document.getElementById('busuanzi_value_site_pv');
-
-    const displayUV = document.getElementById('display_uv');
-    const displayPV = document.getElementById('display_pv');
-
-    if (!uvElement || !pvElement || !displayUV || !displayPV) return;
-
-    const uvText = uvElement.textContent.trim().replace(/,/g, '');
-    const pvText = pvElement.textContent.trim().replace(/,/g, '');
-
-    const uv = Number(uvText);
-    const pv = Number(pvText);
-
-    if (uvText !== '' && Number.isFinite(uv)) {
-      displayUV.textContent = (uv + UV_OFFSET).toLocaleString();
-    }
-
-    if (pvText !== '' && Number.isFinite(pv)) {
-      displayPV.textContent = (pv + PV_OFFSET).toLocaleString();
-    }
-  }
-
-  // 立即尝试一次，并持续检查异步返回的数据
-  updateDisplay();
-  const timer = setInterval(updateDisplay, 500);
-
-  // 30 秒后停止检查
-  setTimeout(() => clearInterval(timer), 1000);
-})();
-</script>
 </body>
 </html>
