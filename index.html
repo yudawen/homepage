@@ -261,5 +261,28 @@
 </footer>
 
 </div>
+  document.addEventListener('DOMContentLoaded', function () {
+
+  // 设置初始值
+  const initialUV = 1000;
+  const initialPV = 3000;
+
+  const uvElement = document.getElementById('busuanzi_value_site_uv');
+  const pvElement = document.getElementById('busuanzi_value_site_pv');
+
+  function updateCount() {
+    const uv = parseInt(uvElement.textContent, 10);
+    const pv = parseInt(pvElement.textContent, 10);
+
+    if (!Number.isNaN(uv) && !Number.isNaN(pv)) {
+      uvElement.textContent = (uv + initialUV).toLocaleString();
+      pvElement.textContent = (pv + initialPV).toLocaleString();
+    } else {
+      setTimeout(updateCount, 500);
+    }
+  }
+
+  updateCount();
+});
 </body>
 </html>
