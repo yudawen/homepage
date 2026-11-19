@@ -248,12 +248,16 @@
   </span>
 
   <!-- 中间 -->
-  <span style="text-align: center;  white-space: nowrap ">
+  <!-- <span style="text-align: center;  white-space: nowrap ">
     👤 Visitors: <span id="busuanzi_value_site_uv">加载中...</span>
     &nbsp; | &nbsp;
     👁 Page Views: <span id="busuanzi_value_site_pv">加载中...</span>
-  </span>
-
+  </span> -->
+<span style="text-align: center; white-space: nowrap;">
+  👤 Visitors: <span id="display_uv">加载中...</span>
+  &nbsp; | &nbsp;
+  👁 Page Views: <span id="display_pv">加载中...</span>
+</span>
   <!-- 右侧 -->
   <a href="mailto:yudawen@fzu.edu.cn" style="text-align: right;">
     Contact
@@ -261,65 +265,46 @@
 </footer>
 
 </div>
-  <script>
+ <script>
+(function () {
+  // 初始统计值
+  const initialUV = 1000;
+  const initialPV = 3000;
 
-  (function () {
-  // ==============================
-  // 1. 设置访问量初始值
-  // ==============================
-  const initialUV = 1567;  // 访客数初始值
-  const initialPV = 3456;  // 访问量初始值
+  const sourceUV = document.getElementById('busuanzi_value_site_uv');
+  const sourcePV = document.getElementById('busuanzi_value_site_pv');
 
-  const uvElement = document.getElementById('busuanzi_value_site_uv');
-  const pvElement = document.getElementById('busuanzi_value_site_pv');
+  const displayUV = document.getElementById('display_uv');
+  const displayPV = document.getElementById('display_pv');
 
-  if (!uvElement || !pvElement) return;
-
-  // ==============================
-  // 2. 记录原始统计值，避免重复累加
-  // ==============================
-  let lastUV = null;
-  let lastPV = null;
+  if (!sourceUV || !sourcePV || !displayUV || !displayPV) return;
 
   function updateCount() {
-    const rawUV = parseInt(uvElement.textContent.replace(/,/g, ''), 10);
-    const rawPV = parseInt(pvElement.textContent.replace(/,/g, ''), 10);
+    const uv = parseInt(sourceUV.textContent.replace(/,/g, ''), 10);
+    const pv = parseInt(sourcePV.textContent.replace(/,/g, ''), 10);
 
-    if (!Number.isFinite(rawUV) || !Number.isFinite(rawPV)) return;
-
-    // 只在原始统计值发生变化时更新
-    if (rawUV !== lastUV) {
-      lastUV = rawUV;
-      uvElement.textContent = (rawUV + initialUV).toLocaleString();
-    }
-
-    if (rawPV !== lastPV) {
-      lastPV = rawPV;
-      pvElement.textContent = (rawPV + initialPV).toLocaleString();
+    if (Number.isFinite(uv) && Number.isFinite(pv)) {
+      displayUV.textContent = (uv + initialUV).toLocaleString();
+      displayPV.textContent = (pv + initialPV).toLocaleString();
     }
   }
 
-  // ==============================
-  // 3. 监听不蒜子数据变化
-  // ==============================
   const observer = new MutationObserver(updateCount);
 
-  observer.observe(uvElement, {
+  observer.observe(sourceUV, {
     childList: true,
     characterData: true,
     subtree: true
   });
 
-  observer.observe(pvElement, {
+  observer.observe(sourcePV, {
     childList: true,
     characterData: true,
     subtree: true
   });
 
-  // 首次尝试更新
   updateCount();
-
 })();
-  </script>
+</script>
 </body>
 </html>
