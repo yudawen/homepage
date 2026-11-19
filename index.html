@@ -261,28 +261,62 @@
 </footer>
 
 </div>
-  document.addEventListener('DOMContentLoaded', function () {
-
-  // 设置初始值
-  const initialUV = 1000;
-  const initialPV = 3000;
+  (function () {
+  // ==============================
+  // 1. 设置访问量初始值
+  // ==============================
+  const initialUV = 1000;  // 访客数初始值
+  const initialPV = 3000;  // 访问量初始值
 
   const uvElement = document.getElementById('busuanzi_value_site_uv');
   const pvElement = document.getElementById('busuanzi_value_site_pv');
 
-  function updateCount() {
-    const uv = parseInt(uvElement.textContent, 10);
-    const pv = parseInt(pvElement.textContent, 10);
+  if (!uvElement || !pvElement) return;
 
-    if (!Number.isNaN(uv) && !Number.isNaN(pv)) {
-      uvElement.textContent = (uv + initialUV).toLocaleString();
-      pvElement.textContent = (pv + initialPV).toLocaleString();
-    } else {
-      setTimeout(updateCount, 500);
+  // ==============================
+  // 2. 记录原始统计值，避免重复累加
+  // ==============================
+  let lastUV = null;
+  let lastPV = null;
+
+  function updateCount() {
+    const rawUV = parseInt(uvElement.textContent.replace(/,/g, ''), 10);
+    const rawPV = parseInt(pvElement.textContent.replace(/,/g, ''), 10);
+
+    if (!Number.isFinite(rawUV) || !Number.isFinite(rawPV)) return;
+
+    // 只在原始统计值发生变化时更新
+    if (rawUV !== lastUV) {
+      lastUV = rawUV;
+      uvElement.textContent = (rawUV + initialUV).toLocaleString();
+    }
+
+    if (rawPV !== lastPV) {
+      lastPV = rawPV;
+      pvElement.textContent = (rawPV + initialPV).toLocaleString();
     }
   }
 
+  // ==============================
+  // 3. 监听不蒜子数据变化
+  // ==============================
+  const observer = new MutationObserver(updateCount);
+
+  observer.observe(uvElement, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+
+  observer.observe(pvElement, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+
+  // 首次尝试更新
   updateCount();
-});
+
+})();
 </body>
 </html>
