@@ -67,6 +67,8 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     object-fit: contain;
     border-radius: 6px;
     flex-shrink: 0;
+      display: block;
+    margin: 0 auto;
 }
 
 .student-info {
