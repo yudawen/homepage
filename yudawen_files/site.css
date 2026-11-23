@@ -155,11 +155,11 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     background: #fbe9e9;
     color: #c00000;
 
-    /* font-size: 15px; */
+    font-size: 12px;
     font-weight: 600;
-        font-size: inherit;
+        /* font-size: inherit; */
     font-weight: 600;
-    line-height: inherit;
+    line-height: 1.5;
 
     white-space: nowrap;
     writing-mode: horizontal-tb;
@@ -238,4 +238,28 @@ li span.text-tag {
     display: inline !important;
 }
 
+/* 强制列表标签与正文保持行内排列 */
+body .shell main li span.text-tag {
+    display: inline !important;
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    max-width: none !important;
 
+    padding: 1px 6px;
+    margin: 0 0 0 5px;
+    border-radius: 3px;
+
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap !important;
+    writing-mode: horizontal-tb !important;
+    vertical-align: baseline !important;
+}
+
+/* 取消标签伪元素可能产生的换行 */
+body .shell main li span.text-tag::before,
+body .shell main li span.text-tag::after {
+    content: none !important;
+    display: none !important;
+}
