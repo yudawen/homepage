@@ -47,3 +47,60 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 
 /* Retire the legacy complete-record page from the main navigation. */
 .main-nav a[href="records.html"]{display:none}
+
+/* 研究生个人介绍 */
+.student-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 24px 0;
+    padding: 18px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.student-photo {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.student-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-info h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.student-info > p {
+    margin: 0 0 12px;
+    color: #666;
+}
+
+.student-info .card {
+    margin-top: 10px;
+}
+
+/* 手机端适配 */
+@media (max-width: 600px) {
+    .student-item {
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .student-photo {
+        width: 90px;
+        height: 115px;
+    }
+
+    .student-info h3 {
+        font-size: 16px;
+    }
+}
