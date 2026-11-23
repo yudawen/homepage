@@ -21,16 +21,23 @@
         }
     </style>
 <style>
-    /* li 内部不使用块级布局 */
-    /* li {
+    /* 保留 li 原有的列表编号 */
+    li {
         display: list-item !important;
-    } */
+    }
 
-    li .text-tag{
+    /* 标签与正文保持行内排列 */
+    li .text-tag {
         display: inline-block !important;
         white-space: nowrap !important;
-        width: fit-content !important;
+        width: auto !important;
         vertical-align: baseline;
+    }
+
+    /* 禁止标签伪元素重复生成内容 */
+    li .text-tag::before,
+    li .text-tag::after {
+        content: none !important;
     }
 </style>
     <meta charset="utf-8">
