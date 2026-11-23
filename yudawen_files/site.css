@@ -154,6 +154,12 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     font-size: 12px;
     font-weight: 600;
     line-height: 1.5;
+
+    /* 防止文字竖排 */
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    word-break: keep-all;
+    width: auto;
     vertical-align: middle;
 }
 
