@@ -20,7 +20,19 @@
             color: #c00000 !important;
         }
     </style>
+<style>
+    /* li 内部不使用块级布局 */
+    li {
+        display: list-item !important;
+    }
 
+    li .text-tag{
+        display: inline-block !important;
+        white-space: nowrap !important;
+        width: fit-content !important;
+        vertical-align: baseline;
+    }
+</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
