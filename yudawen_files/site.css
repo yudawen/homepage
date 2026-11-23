@@ -146,7 +146,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 }
 /* 通用标签样式 */
 .text-tag {
-    display: inline-flex !important;
+    display: flex !important;
     width: fit-content;
     padding: 2px 7px;
     margin-left: 5px;
