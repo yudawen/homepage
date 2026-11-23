@@ -224,8 +224,7 @@ li span.word-tag {
 
     white-space: nowrap !important;
     writing-mode: horizontal-tb !important;
-    vertical-align: middle;
-}
+   vertical-align: baseline;}
 
 /* 禁止伪元素自动换行 */
 li span.word-tag::before,
