@@ -144,5 +144,16 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     color: #c00000;
     background: #fbe9e9;
 }
-
+.text-tag {
+    display: inline-block;
+    padding: 2px 7px;
+    margin-left: 5px;
+    border-radius: 3px;
+    background: #fbe9e9;
+    color: #c00000;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    vertical-align: middle;
+}
 
