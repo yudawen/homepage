@@ -205,3 +205,24 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     background: #eeeeee;
     color: #666666;
 }
+
+/* 通用标签样式 */
+.word-tag {
+    width: fit-content;
+    padding: 2px 7px;
+    margin-left: 5px;
+    border-radius: 3px;
+
+    background: #fbe9e9;
+    color: #c00000;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    white-space: nowrap;
+    writing-mode: horizontal-tb;
+    vertical-align: middle;
+}
+
+
