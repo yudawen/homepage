@@ -208,6 +208,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 
 /* 通用标签样式 */
 li span.word-tag {
+    width: fit-content;
     display: inline !important;
     width: auto !important;
     padding: 2px 7px;
