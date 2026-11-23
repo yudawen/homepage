@@ -207,4 +207,62 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     background: #eeeeee;
     color: #666666;
 }
+/* 粉色 */
+.text-tag.pink {
+    background: #fce8ef;
+    color: #c04470;
+}
 
+/* 黄色 */
+.text-tag.yellow {
+    background: #fff8dc;
+    color: #9a7600;
+}
+
+/* 靛蓝色 */
+.text-tag.indigo {
+    background: #e9eafd;
+    color: #4b50a5;
+}
+
+/* 深蓝色 */
+.text-tag.navy {
+    background: #e6edf5;
+    color: #345578;
+}
+
+/* 棕色 */
+.text-tag.brown {
+    background: #f2e9e2;
+    color: #80583d;
+}
+
+/* 薄荷绿 */
+.text-tag.mint {
+    background: #e3f4ee;
+    color: #27836a;
+}
+
+/* 珊瑚色 */
+.text-tag.coral {
+    background: #ffebe5;
+    color: #c45c43;
+}
+
+/* 薰衣草色 */
+.text-tag.lavender {
+    background: #f0eafa;
+    color: #8061aa;
+}
+
+/* 石板灰蓝色 */
+.text-tag.slate {
+    background: #e9eef2;
+    color: #536878;
+}
+
+/* 浅绿色 */
+.text-tag.lime {
+    background: #eff5df;
+    color: #66852d;
+}
