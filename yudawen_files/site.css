@@ -61,7 +61,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 }
 
 .student-photo {
-    width: 20%;
+    width: 100%;
     max-width: 150px;
     height: auto;
     object-fit: contain;
