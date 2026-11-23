@@ -207,8 +207,9 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 }
 
 /* 通用标签样式 */
-.word-tag {
-    width: fit-content;
+li span.word-tag {
+    display: inline !important;
+    width: auto !important;
     padding: 2px 7px;
     margin-left: 5px;
     border-radius: 3px;
@@ -220,9 +221,16 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     font-weight: 600;
     line-height: 1.5;
 
-    white-space: nowrap;
-    writing-mode: horizontal-tb;
+    white-space: nowrap !important;
+    writing-mode: horizontal-tb !important;
     vertical-align: middle;
+}
+
+/* 禁止伪元素自动换行 */
+li span.word-tag::before,
+li span.word-tag::after {
+    content: none !important;
+    display: none !important;
 }
 
 
