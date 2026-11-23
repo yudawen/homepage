@@ -145,21 +145,19 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     background: #fbe9e9;
 }
 .text-tag {
-    display: inline-block;
-    width: fit-content;
+    display: inline;
     padding: 2px 7px;
     margin-left: 5px;
     border-radius: 3px;
-
     background: #fbe9e9;
     color: #c00000;
-
     font-size: 12px;
     font-weight: 600;
     line-height: 1.5;
-
     white-space: nowrap;
     writing-mode: horizontal-tb;
     vertical-align: middle;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
