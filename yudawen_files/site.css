@@ -144,6 +144,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     color: #c00000;
     background: #fbe9e9;
 }
+/* 通用标签样式 */
 .text-tag {
     display: inline !important;
     width: fit-content;
@@ -161,4 +162,46 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     white-space: nowrap;
     writing-mode: horizontal-tb;
     vertical-align: middle;
+}
+
+/* 红色 */
+.text-tag.red {
+    background: #fbe9e9;
+    color: #c00000;
+}
+
+/* 蓝色 */
+.text-tag.blue {
+    background: #e8f2fc;
+    color: #1769aa;
+}
+
+/* 绿色 */
+.text-tag.green {
+    background: #e8f5ed;
+    color: #287a50;
+}
+
+/* 橙色 */
+.text-tag.orange {
+    background: #fff1df;
+    color: #b76512;
+}
+
+/* 紫色 */
+.text-tag.purple {
+    background: #f1eafa;
+    color: #7546a6;
+}
+
+/* 青色 */
+.text-tag.cyan {
+    background: #e5f5f5;
+    color: #167b83;
+}
+
+/* 灰色 */
+.text-tag.gray {
+    background: #eeeeee;
+    color: #666666;
 }
