@@ -234,5 +234,8 @@ li span.word-tag::after {
     content: none !important;
     display: none !important;
 }
+li span.text-tag {
+    display: inline !important;
+}
 
 
