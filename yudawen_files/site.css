@@ -155,11 +155,11 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     background: #fbe9e9;
     color: #c00000;
 
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
         /* font-size: inherit; */
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.2;
 
     white-space: nowrap;
     writing-mode: horizontal-tb;
@@ -208,58 +208,3 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     color: #666666;
 }
 
-/* 通用标签样式 */
-li span.word-tag {
-    width: fit-content;
-    display: inline !important;
-    width: auto !important;
-    padding: 2px 7px;
-    margin-left: 5px;
-    border-radius: 3px;
-
-    background: #fbe9e9;
-    color: #c00000;
-
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.5;
-
-    white-space: nowrap !important;
-    writing-mode: horizontal-tb !important;
-   vertical-align: baseline;}
-
-/* 禁止伪元素自动换行 */
-li span.word-tag::before,
-li span.word-tag::after {
-    content: none !important;
-    display: none !important;
-}
-li span.text-tag {
-    display: inline !important;
-}
-
-/* 强制列表标签与正文保持行内排列 */
-body .shell main li span.text-tag {
-    display: inline !important;
-    position: static !important;
-    float: none !important;
-    width: auto !important;
-    max-width: none !important;
-
-    padding: 1px 6px;
-    margin: 0 0 0 5px;
-    border-radius: 3px;
-
-    font-size: inherit;
-    line-height: inherit;
-    white-space: nowrap !important;
-    writing-mode: horizontal-tb !important;
-    vertical-align: baseline !important;
-}
-
-/* 取消标签伪元素可能产生的换行 */
-body .shell main li span.text-tag::before,
-body .shell main li span.text-tag::after {
-    content: none !important;
-    display: none !important;
-}
