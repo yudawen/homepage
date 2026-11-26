@@ -66,6 +66,8 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
     width: 76px;
     height: 92px;
     object-fit: cover;
+    image-rendering: auto;
+    backface-visibility: hidden;
     border: 1px solid #cbd5dc;
     border-radius: 4px;
     flex-shrink: 0;
