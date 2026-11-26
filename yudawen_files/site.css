@@ -36,7 +36,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 .publication{padding-top:8px;padding-bottom:8px}
 
 /* Horizontal record modules for experience, projects, awards, and intellectual property. */
-.card:has(> .timeline),.two-col > .card:has(> ol.plain-list){display:grid;grid-template-columns:126px minmax(0,1fr);gap:18px;align-items:start}.card:has(> .timeline) h3,.two-col > .card:has(> ol.plain-list) h3{margin:0;padding:3px 13px 3px 0;border-right:2px solid var(--record-red);line-height:1.55}.card:has(> .timeline) .timeline,.two-col > .card:has(> ol.plain-list) .plain-list{margin:0}
+.card:has(> .timeline),.two-col > .card:has(> ol.plain-list){display:grid;grid-template-columns:100px minmax(0,1fr);gap:10px;align-items:start}.card:has(> .timeline) h3,.two-col > .card:has(> ol.plain-list) h3{margin:0;padding:3px 13px 3px 0;border-right:2px solid var(--record-red);line-height:1.55}.card:has(> .timeline) .timeline,.two-col > .card:has(> ol.plain-list) .plain-list{margin:0}
 @media(max-width:720px){.card:has(> .timeline),.two-col > .card:has(> ol.plain-list){grid-template-columns:1fr;gap:10px}.card:has(> .timeline) h3,.two-col > .card:has(> ol.plain-list) h3{padding:0 0 7px;border-right:0;border-bottom:2px solid var(--record-red)}}
 
 /* Each experience/research module occupies a full row of the content area. */
