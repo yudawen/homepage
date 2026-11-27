@@ -228,8 +228,8 @@ main > .section:has(.student-item) > .section-title {
 
 /* 灰色 */
 .text-tag.gray {
-    background: #eeeeee;
-    color: #666666;
+    background: #e5e5e5;
+    color: #333333;
 }
 /* 粉色 */
 .text-tag.pink {
