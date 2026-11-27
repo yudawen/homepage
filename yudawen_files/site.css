@@ -20,7 +20,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 .plain-list li,.timeline li{padding-left:2.45em}.publication{padding-left:2.75em;text-indent:-2.75em}.publication .num{width:2.45em}
 
 /* Publication records use a true two-column row so every number aligns precisely. */
-.publication{display:grid;grid-template-columns:2.45em minmax(0,1fr);column-gap:.16em;padding-left:0;text-indent:0}.publication .num{display:block;width:auto}.publication-content{min-width:0}
+.publication{display:grid;grid-template-columns:2.45em 92px minmax(0,1fr);column-gap:10px;padding-left:0;text-indent:0;align-items:center}.publication .num{display:block;width:auto}.publication-image{display:block;width:92px;height:auto;max-height:100%;object-fit:contain;object-position:center;border:1px solid #cbd5dc;padding:2px;background:#fff;align-self:center}.publication-content{min-width:0}.section:has(.publication) .publication:not(:has(.publication-image)){grid-template-columns:2.45em minmax(0,1fr)}
 
 /* Timeline rows: number, date, and description share one stable left edge. */
 .timeline li{padding:10px 0 10px 2.45em}.timeline li::before{top:10px}.timeline time{display:inline;margin-right:.55em}
