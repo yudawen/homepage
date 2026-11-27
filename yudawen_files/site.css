@@ -207,6 +207,12 @@ main > .section:has(.student-item) > .section-title {
     background: #e8f5ed;
     color: #287a50;
 }
+/* 绿色 */
+.text-tag.white {
+    background: #333333;
+    color: #ffffff;
+}
+
 
 /* 橙色 */
 .text-tag.orange {
