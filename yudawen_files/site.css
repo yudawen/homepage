@@ -21,6 +21,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 
 /* Publication records use a true two-column row so every number aligns precisely. */
 .publication{display:grid;grid-template-columns:2.45em 92px minmax(0,1fr);column-gap:10px;padding-left:0;text-indent:0;align-items:center}.publication .num{display:block;width:auto}.publication-image{display:block;width:92px;height:auto;max-height:100%;object-fit:contain;object-position:center;border:1px solid #cbd5dc;padding:2px;background:#fff;align-self:center}.publication-content{min-width:0}.section:has(.publication) .publication:not(:has(.publication-image)){grid-template-columns:2.45em minmax(0,1fr)}
+.special-issue{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:stretch}.special-issue img{width:92px;height:100%;min-height:100%;object-fit:contain;align-self:stretch;border:1px solid #cbd5dc;padding:2px;background:#fff}.special-issue-content{min-width:0;align-self:center}.special-issue-content h3{margin:0 0 6px}.special-issue-content p{margin:0 0 8px}.special-issue-content p:last-child{margin-bottom:0}
 
 /* Timeline rows: number, date, and description share one stable left edge. */
 .timeline li{padding:10px 0 10px 2.45em}.timeline li::before{top:10px}.timeline time{display:inline;margin-right:.55em}
@@ -44,6 +45,7 @@ body{font-family:"Times New Roman","Noto Serif SC","Songti SC","Microsoft YaHei"
 
 /* Full-width modules do not need a vertical divider beside their titles. */
 .card:has(> .timeline) h3,.two-col > .card:has(> ol.plain-list) h3{border-right:0}
+.two-col > .card:has(> .project-card-icon){grid-template-columns:100px minmax(0,1fr);grid-template-rows:auto 1fr;column-gap:10px;row-gap:0;align-items:start}.two-col > .card:has(> .project-card-icon) h3{grid-column:1;grid-row:1;margin:0;padding:3px 0;line-height:1.55;text-align:center}.two-col > .card:has(> .project-card-icon) .plain-list{grid-column:2;grid-row:1 / span 2}.project-card-icon{grid-column:1;grid-row:2;display:flex;justify-content:center;align-items:center;align-self:start;height:2.45em;padding:0;color:#b84a4a}.project-card-icon svg{display:block;width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 
 /* Retire the legacy complete-record page from the main navigation. */
 .main-nav a[href="records.html"]{display:none}
